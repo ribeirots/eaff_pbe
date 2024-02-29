@@ -294,7 +294,7 @@ with open(sys.argv[2]) as inputData:
 
 
 
-snpPrint = open(filename + 'snp_PBE.txt', 'w')
+snpPrint = open(filename + 'data_persnp_PBE.txt', 'w')
 header_s = 'Scaffold\tsnp position\talleles_1\talleles_2\talleles_3\tT1.2\tT1.3\tT2.3\tFST1.2\tFST1.3\tFST2.3\tPBS\tPBE\n'
 snpPrint.write(header_s)
 for obs in snpDATA:
@@ -334,7 +334,7 @@ for wdata in windowDATA:
         wdata[22] = 'NA'
 
 
-windowPrint = open(filename +'_window_PBE.txt', 'w')
+windowPrint = open(filename +'_window_summary_PBE', 'w')
 # Scaff, Start, End, Length, Pi1, Pi2, Pi3, t12, t13, t23, win_fst_12, max_fst_12, pos_max_fst_12, maxpbs, maxpbs_pos, win_pbs
 header_w = 'Scaffold\tStart\tEnd\tWindowLength\tpi_1\tpi_2\tpi_3\tT_1.2\tT_1.3\tT_2.3\tWinFST_1.2\tMaxSNP_FST_1.2\tPositionMaxSNP_FST_1.2\tWinFST_1.3\tMaxSNP_FST_1.3\tPositionMaxSNP_FST_1.3\tWinFST_2.3\tMaxSNP_FST_2.3\tPosition_MaxSNP_FST_2.3\tMaxSNP_PBS\tPositionMaxSNP_PBS\tWindowPBS\tWindowPBE\tMaxSNP_PBE\tPosition_MaxSNP_PBE\n'
 windowPrint.write(header_w)
